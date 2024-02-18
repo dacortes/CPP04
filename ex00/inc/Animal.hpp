@@ -6,7 +6,7 @@
 /*   By: dacortes <dacortes@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/17 08:47:31 by dacortes          #+#    #+#             */
-/*   Updated: 2024/02/18 03:11:09 by dacortes         ###   ########.fr       */
+/*   Updated: 2024/02/18 15:32:23 by dacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ class Animal
 		Animal(std::string _type);
 		Animal(const Animal &obj);
 		Animal &operator=(const Animal &obj);
-		~Animal(void);
+		virtual ~Animal(void);
 		/*
 		 * Get Methods
 		*/
@@ -59,7 +59,7 @@ class Animal
 		/*
 		 * Membert Funtions
 		*/
-		void	makeSound(void) const;
+		virtual void	makeSound(void) const;
 };
 
 std::ostream &operator<<(std::ostream &os, const Animal &obj);

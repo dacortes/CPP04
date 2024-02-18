@@ -6,7 +6,7 @@
 /*   By: dacortes <dacortes@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/18 02:02:14 by dacortes          #+#    #+#             */
-/*   Updated: 2024/02/18 03:11:06 by dacortes         ###   ########.fr       */
+/*   Updated: 2024/02/18 15:32:15 by dacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,13 +37,13 @@ Animal	&Animal::operator=(const Animal &obj)
 
 Animal::~Animal(void)
 {
-	std::cout << G << "Animal: " << E << " Destructor called" << std::endl;
+	std::cout << G << "Animal: " << E << "Destructor called" << std::endl;
 }
 
 /*
  * Get Methods
 */
-std::string	Animal::getType(void) const;
+std::string	Animal::getType(void) const
 {
 	return (this->type);
 }
@@ -65,11 +65,11 @@ void	Animal::makeSound(void) const
 std::ostream &operator<<(std::ostream &os, const Animal &obj)
 {
 	if (obj.getType() == "Cat")
-	   os << O << "Type: " << E << obj.getType() << std::endl;
+	   os << O << "Type: " << E << obj.getType();
 	else if (obj.getType() == "Dog")
-	   os << Y << "Type: " << E << obj.getType() << std::endl;
+	   os << Y << "Type: " << E << obj.getType();
 	else
-	   os << F << "Type: " << E << obj.getType() << std::endl;
+	   os << F << "Type: " << E << obj.getType();
 	return (os);
 }
 
@@ -78,11 +78,11 @@ std::ostream &operator<<(std::ostream &os, const Animal *obj)
 	if (obj)
 	{
 		if (obj->getType() == "Cat")
-		   os << O << "Type: " << E << obj->getType() << std::endl;
+		   os << O << "Type: " << E << obj->getType();
 		else if (obj->getType() == "Dog")
-		   os << Y << "Type: " << E << obj->getType() << std::endl;
+		   os << Y << "Type: " << E << obj->getType();
 		else
-		   os << F << "Type: " << E << obj->getType() << std::endl;
+		   os << F << "Type: " << E << obj->getType();
 	}
 	return (os);
 }

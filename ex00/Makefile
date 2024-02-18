@@ -6,7 +6,7 @@
 #    By: dacortes <dacortes@student.42barcel>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/17 08:43:40 by dacortes          #+#    #+#              #
-#    Updated: 2024/02/18 03:11:11 by dacortes         ###   ########.fr        #
+#    Updated: 2024/02/18 15:32:20 by dacortes         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,14 +17,14 @@
 NAME = Polymorphism
 CPP = c++
 FLAGS = -Wall -Werror -Wextra -g -pedantic -std=c++98 \
-	-fsanitize=address
+	#-fsanitize=address
 RM = rm -rf
 
 ################################################################################
 #                               SOURCES                                        #
 ################################################################################
 
-SRC = Animal.cpp main.cpp
+SRC = Animal.cpp Cat.cpp Dog.cpp main.cpp
 INC = $(addprefix -I , inc/)
 
 ################################################################################
