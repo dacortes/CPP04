@@ -6,7 +6,7 @@
 /*   By: dacortes <dacortes@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/18 16:26:10 by dacortes          #+#    #+#             */
-/*   Updated: 2024/02/19 00:56:50 by dacortes         ###   ########.fr       */
+/*   Updated: 2024/02/18 18:06:36 by dacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,6 @@ class WrongCat: public WrongAnimal
 		/*
 		 * Membert Funtions
 		*/
-		void	makeSound(void) const;
+		virtual void	makeSound(void) const;
 };
 #endif

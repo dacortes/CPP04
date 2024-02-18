@@ -6,7 +6,7 @@
 #    By: dacortes <dacortes@student.42barcel>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/17 08:43:40 by dacortes          #+#    #+#              #
-#    Updated: 2024/02/18 18:06:34 by dacortes         ###   ########.fr        #
+#    Updated: 2024/02/18 18:56:03 by dacortes         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@
 #                               VARIABLES                                      #
 ################################################################################
 
-NAME = Polymorphism
+NAME = Brain 
 CPP = c++
 FLAGS = -Wall -Werror -Wextra -g -pedantic -std=c++98 \
 	#-fsanitize=address

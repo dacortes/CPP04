@@ -1,17 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dacortes <dacortes@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/17 08:47:31 by dacortes          #+#    #+#             */
-/*   Updated: 2024/02/18 18:06:33 by dacortes         ###   ########.fr       */
+/*   Created: 2024/02/18 18:58:57 by dacortes          #+#    #+#             */
+/*   Updated: 2024/02/18 19:13:53 by dacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# ifndef ANIMAL_HPP
-# define ANIMAL_HPP
+#ifndef BRAIN_HPP
+# define BRAIN_HPP
+
 
 /******************************************************************************/
 /*                            INCLUDES                                        */
@@ -39,29 +40,32 @@
 /*                            CLASS                                           */
 /******************************************************************************/
 
-class Animal
+#ifndef MAX_IDES
+# define MAX_IDEAS 100
+#endif
+
+class Brain
 {
-	protected:
-		std::string	type;
+	private:
+		std::string		ideas[MAX_IDEAS];
+		unsigned int	index;
 	public:
 		/*
 		 * Orthodox Canonical Form
 		*/
-		Animal(void);
-		Animal(std::string _type);
-		Animal(const Animal &obj);
-		Animal &operator=(const Animal &obj);
-		virtual ~Animal(void);
+		Brain(void);
+		Brain(std::string _idea);
+		Brain(const Brain &obj);
+		Brain &operator=(const  Brain &obj);
+		~Brain(void);
+		/*
+		 * Set Methods
+		*/
+		void	setIdea(std::string _idea);
 		/*
 		 * Get Methods
 		*/
-		std::string	getType(void) const; 
-		/*
-		 * Membert Funtions
-		*/
-		virtual void	makeSound(void) const;
+		std::string getIdea();	
 };
-
-std::ostream &operator<<(std::ostream &os, const Animal &obj);
-std::ostream &operator<<(std::ostream &os, const Animal *obj);
 #endif
+

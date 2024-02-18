@@ -6,7 +6,7 @@
 /*   By: dacortes <dacortes@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/18 16:44:14 by dacortes          #+#    #+#             */
-/*   Updated: 2024/02/18 17:07:33 by dacortes         ###   ########.fr       */
+/*   Updated: 2024/02/19 00:56:51 by dacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ class WrongAnimal
 		/*
 		 * Membert Funtions
 		*/
-		virtual void	makeSound(void) const;
+		void	makeSound(void) const;
 };
 
 std::ostream &operator<<(std::ostream &os, const WrongAnimal &obj);
