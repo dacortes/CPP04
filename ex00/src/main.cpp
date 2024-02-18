@@ -6,11 +6,14 @@
 /*   By: dacortes <dacortes@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/17 08:45:38 by dacortes          #+#    #+#             */
-/*   Updated: 2024/02/17 08:45:56 by dacortes         ###   ########.fr       */
+/*   Updated: 2024/02/18 03:11:08 by dacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "../inc/Animal.hpp"
+
 int	main(void)
 {
-	return (0);
+	Animal foo("Cat")
+	return (EXIT_SUCCESS);
 }
