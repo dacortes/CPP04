@@ -6,7 +6,7 @@
 /*   By: dacortes <dacortes@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/18 11:48:41 by dacortes          #+#    #+#             */
-/*   Updated: 2024/02/18 18:06:28 by dacortes         ###   ########.fr       */
+/*   Updated: 2024/02/19 01:08:45 by dacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ Cat::Cat(void): Animal("Cat")
 
 Cat::Cat(const Cat &obj): Animal(obj.type)
 {
-
 	std::cout << G << "Cat: " << E << "Copy constructor called" << std::endl;
 }
 

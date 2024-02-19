@@ -6,7 +6,7 @@
 /*   By: dacortes <dacortes@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/18 02:02:14 by dacortes          #+#    #+#             */
-/*   Updated: 2024/02/18 18:06:31 by dacortes         ###   ########.fr       */
+/*   Updated: 2024/02/19 01:23:05 by dacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,13 @@ Animal::Animal(void)
 
 Animal::Animal(std::string _type)
 {
-	std::cout << G << "Animal: " << E << "Copy constructor called" << std::endl;
+	std::cout << G << "Animal: " << E << "Type constructor called" << std::endl;
 	this->type = _type;
 }
 
 Animal::Animal(const Animal &obj)
 {
-	std::cout << B << "Animal: " << E << "Copy constructor called" << std::endl;
+	std::cout << G << "Animal: " << E << "Copy constructor called" << std::endl;
 	this->type = obj.type;
 }
 

@@ -6,7 +6,7 @@
 /*   By: dacortes <dacortes@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/18 18:58:57 by dacortes          #+#    #+#             */
-/*   Updated: 2024/02/18 19:13:53 by dacortes         ###   ########.fr       */
+/*   Updated: 2024/02/19 01:57:14 by dacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,11 @@ class Brain
 		/*
 		 * Get Methods
 		*/
-		std::string getIdea();	
+		std::string 	getIdea(unsigned int _index) const;
+		unsigned int	getIndex(void) const;
 };
+
+std::ostream &operator<<(std::ostream &os, const Brain &obj);
+std::ostream &operator<<(std::ostream &os, const Brain *obj);
 #endif
 

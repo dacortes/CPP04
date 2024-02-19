@@ -6,7 +6,7 @@
 #    By: dacortes <dacortes@student.42barcel>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/17 08:43:40 by dacortes          #+#    #+#              #
-#    Updated: 2024/02/18 18:56:03 by dacortes         ###   ########.fr        #
+#    Updated: 2024/02/19 01:49:16 by dacortes         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ RM = rm -rf
 #                               SOURCES                                        #
 ################################################################################
 
-SRC = Animal.cpp Cat.cpp Dog.cpp WrongCat.cpp WrongAnimal.cpp main.cpp
+SRC = Animal.cpp Cat.cpp Dog.cpp WrongCat.cpp WrongAnimal.cpp Brain.cpp main.cpp
 INC = $(addprefix -I , inc/)
 
 ################################################################################
