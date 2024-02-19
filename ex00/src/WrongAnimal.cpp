@@ -6,7 +6,7 @@
 /*   By: dacortes <dacortes@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/18 16:47:25 by dacortes          #+#    #+#             */
-/*   Updated: 2024/02/19 00:56:46 by dacortes         ###   ########.fr       */
+/*   Updated: 2024/02/19 01:18:45 by dacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ WrongAnimal::WrongAnimal(void)
 
 WrongAnimal::WrongAnimal(std::string _type)
 {
-	std::cout << B << "WrongAnimal: " << E << "Copy constructor called" << std::endl;
+	std::cout << B << "WrongAnimal: " << E << "Type constructor called" << std::endl;
 	this->type = _type;
 }
 
