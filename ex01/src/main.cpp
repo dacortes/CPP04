@@ -6,7 +6,7 @@
 /*   By: dacortes <dacortes@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/17 08:45:38 by dacortes          #+#    #+#             */
-/*   Updated: 2024/02/18 19:13:58 by dacortes         ###   ########.fr       */
+/*   Updated: 2024/02/19 17:17:32 by dacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,9 @@ void	test_init_Animal(Animal *_basic, Animal *_Cat, Animal *_Dog)
 	std::cout << C << "Test init: Animal" << E << std::endl; 
 	std::cout << _basic << std::endl;
 	std::cout << _Cat << std::endl;
+	std::cout << _Dog << std::endl;
+	//std::cout << dynamic_cast<Cat*>(_Cat) << std::endl;
+	//std::cout << dynamic_cast<Dog*>(_Dog) << std::endl;
 	std::cout << _Dog << std::endl;
 	std::cout << C << "----------------------------------\n" << E;
 }

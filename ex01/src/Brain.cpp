@@ -6,7 +6,7 @@
 /*   By: dacortes <dacortes@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 00:59:33 by dacortes          #+#    #+#             */
-/*   Updated: 2024/02/19 01:53:13 by dacortes         ###   ########.fr       */
+/*   Updated: 2024/02/19 17:17:33 by dacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ Brain::Brain(void)
 		<< std::endl;
 	this->index = 0;
 	for (unsigned int iter = 0; iter < MAX_IDEAS; iter++)
-		this->ideas[iter] = "Schizophrenia :v";
+		this->ideas[iter] = "Schizophrenia :v ";
 }
 
 Brain::Brain(std::string _idea)
@@ -30,7 +30,15 @@ Brain::Brain(std::string _idea)
 	this->index = 0;
 	this->ideas[0] = _idea;
 	for (unsigned int iter = 1; iter < MAX_IDEAS; iter++)
-		this->ideas[iter] = "Schizophrenia :v";
+		this->ideas[iter] = "Schizophrenia :v ";
+}
+
+Brain::Brain(const Brain &obj)
+{
+	std::cout << C << "Brain: " << E << "Copy constructor called" << std::endl;
+	for (unsigned int iter = 0; iter < MAX_IDEAS; iter++)
+		this->ideas[iter] = obj.ideas[iter];
+	this->index = obj.index;
 }
 
 Brain	&Brain::operator=(const Brain &obj)
@@ -77,7 +85,6 @@ unsigned int	Brain::getIndex(void) const
 {
 	return (this->index);
 }
-
 
 std::ostream &operator<<(std::ostream &os, const Brain &obj)
 {

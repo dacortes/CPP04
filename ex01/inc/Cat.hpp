@@ -6,7 +6,7 @@
 /*   By: dacortes <dacortes@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/18 11:48:54 by dacortes          #+#    #+#             */
-/*   Updated: 2024/02/18 18:06:35 by dacortes         ###   ########.fr       */
+/*   Updated: 2024/02/19 17:17:29 by dacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@
 /*                            INCLUDES                                        */
 /******************************************************************************/
 
-#include "Animal.hpp"
+# include "Animal.hpp"
+# include "Brain.hpp"
 
 /******************************************************************************/
 /*                            CLASS                                           */
@@ -25,6 +26,8 @@
 
 class Cat: public Animal
 {
+	private:
+		Brain	*brain;
 	public:
 		/*
 		 * Orthodox Canonical Form
@@ -34,8 +37,21 @@ class Cat: public Animal
 		Cat &operator=(const Cat &obj);
 		~Cat(void);
 		/*
+		 * Set Methods
+		*/
+		void	setIdea(std::string idea);
+		/*
+		 * Get Methods
+		*/
+		std::string 	getIdea(unsigned int index) const;
+		unsigned int	getIndex(void) const;
+		/*
 		 * Membert Funtions
 		*/
 		virtual void	makeSound(void) const;
+		std::ostream 	&coutBrain(std::ostream &os) const;
 };
+
+std::ostream &operator<<(std::ostream &os, const Cat &obj);
+std::ostream &operator<<(std::ostream &os, const Cat *obj);
 #endif

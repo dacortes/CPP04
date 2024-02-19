@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dacortes <dacortes@student.42barcel>       +#+  +:+       +#+        */
+/*   By: eralonso <dacortes@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/18 15:16:42 by dacortes          #+#    #+#             */
-/*   Updated: 2024/02/18 18:06:29 by dacortes         ###   ########.fr       */
+/*   Updated: 2024/02/19 17:17:34 by dacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,19 +19,33 @@ Dog::Dog(void): Animal("Dog")
 {
 	std::cout << Y << "Dog: " << E << "Default constructor called"
 		<< std::endl;
+	this->brain = new Brain();
 }
 
 Dog::Dog(const Dog &obj): Animal(obj.type)
 {
 	std::cout << Y << "Dog: " << E << "Copy constructor called" << std::endl;
-	this->type = obj.type;
+	if (obj.brain)
+		this->brain = new Brain(*obj.brain);
+	else
+		this->brain = new Brain();
 }
 
 Dog	&Dog::operator=(const Dog &obj)
 {
 	std::cout << Y << "Dog: " << E << "Assignation operator called"
 		<< std::endl;
-	this->type = obj.type;
+	if (this  != &obj)
+	{
+		if (this->brain)
+		{
+			delete this->brain;
+			this->brain = new Brain(*obj.brain);
+		}
+		else
+			this->brain = new Brain();
+		this->type = obj.type;
+	}
 	return (*this);
 }
 
@@ -39,6 +53,28 @@ Dog	&Dog::operator=(const Dog &obj)
 Dog::~Dog(void)
 {
 	std::cout << Y << "Dog: " << E << "Destructor called" << std::endl;
+	if (this->brain)
+		delete this->brain;
+}
+
+void	Dog::setIdea(std::string idea)
+{
+	if (this->brain)
+		this->brain->setIdea(idea);
+}
+
+std::string	Dog::getIdea(unsigned int index) const
+{
+	if (this->brain)
+		return (this->brain->getIdea(index));
+	return ("No brain");
+}
+
+unsigned int Dog::getIndex(void) const
+{
+	if (this->brain)
+		return (this->brain->getIndex());
+	return (142);
 }
 
 /*
@@ -49,3 +85,23 @@ void	Dog::makeSound(void) const
 	std::cout << Y << "Dog: " << E << "Haf Haf!"
 		<< std::endl;
 }
+
+std::ostream &Dog::coutBrain(std::ostream &os) const
+{
+	os << this->brain;
+	return (os);
+}
+
+std::ostream &operator<<(std::ostream &os, const Dog &obj)
+{
+	os << O << "Type: " << E << obj.getType() << " ";
+	obj.coutBrain(os);
+	return (os);
+}
+
+std::ostream &operator<<(std::ostream &os, const Dog *obj)
+{
+	os << O << "Type: " << E << obj->getType() << " ";
+	obj->coutBrain(os);
+	return (os);
+}	
