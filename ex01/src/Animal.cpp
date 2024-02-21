@@ -6,7 +6,7 @@
 /*   By: dacortes <dacortes@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/18 02:02:14 by dacortes          #+#    #+#             */
-/*   Updated: 2024/02/19 17:14:48 by dacortes         ###   ########.fr       */
+/*   Updated: 2024/02/21 13:45:58 by dacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,10 +42,12 @@ Animal	&Animal::operator=(const Animal &obj)
 	return (*this);
 }
 
+
 Animal::~Animal(void)
 {
 	std::cout << G << "Animal: " << E << "Destructor called" << std::endl;
 }
+
 
 /*
  * Get Methods
