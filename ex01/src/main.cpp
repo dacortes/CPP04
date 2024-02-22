@@ -6,7 +6,7 @@
 /*   By: dacortes <dacortes@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/17 08:45:38 by dacortes          #+#    #+#             */
-/*   Updated: 2024/02/21 17:17:25 by dacortes         ###   ########.fr       */
+/*   Updated: 2024/02/22 09:30:55 by dacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -143,9 +143,9 @@ void	set_ideas(Animal **basic, unsigned int num)
 	for (unsigned int idea = 0; idea < num; idea++)
 	{
 		if (!(idea % 2))
-			basic[idea]->setIdea("conquer the world");
+			dynamic_cast<Cat*>(basic[idea])->setIdea("conquer the world");
 		else
-			basic[idea]->setIdea("meal");
+			dynamic_cast<Dog*>(basic[idea])->setIdea("meal");
 	}
 	print_ideas(basic, num);
 }
@@ -167,35 +167,35 @@ bool	become_aware(unsigned int num)
 
 int	main(void)
 {
-//	Animal *_basic = new Animal();
-//	Animal *_Cat = new Cat();
-//	Animal *_Dog = new Dog();
-//	WrongAnimal *fooBasic = new WrongAnimal();
-//	WrongAnimal *fooCat = new WrongCat();
-//
-//	/*
-//	 * Test Animal
-//	*/
-//	test_init_Animal(_basic, _Cat, _Dog);
-//	test_sound_animal(_basic, _Cat, _Dog);
-//	test_getType_animal(_basic, _Cat, _Dog);
-//	/*
-//	 * Test WrongAnimal
-//	*/
-//	test_init_WrongAnimal(fooBasic, fooCat);
-//	test_sound_WrongAnimal(fooBasic, fooCat);
-//	test_getType_WrongAnimal(fooBasic, fooCat);
-//	/*
-//	 * Free memory: class Animal
-//	*/
-//	delete _basic;
-//	delete _Cat;
-//	delete _Dog;
-//	/*
-//	 * Free memory: class WrongAnimal
-//	*/
-//	delete fooBasic;
-//	delete fooCat;
+	Animal *_basic = new Animal();
+	Animal *_Cat = new Cat();
+	Animal *_Dog = new Dog();
+	WrongAnimal *fooBasic = new WrongAnimal();
+	WrongAnimal *fooCat = new WrongCat();
+
+	/*
+	 * Test Animal
+	*/
+	test_init_Animal(_basic, _Cat, _Dog);
+	test_sound_animal(_basic, _Cat, _Dog);
+	test_getType_animal(_basic, _Cat, _Dog);
+	/*
+	 * Test WrongAnimal
+	*/
+	test_init_WrongAnimal(fooBasic, fooCat);
+	test_sound_WrongAnimal(fooBasic, fooCat);
+	test_getType_WrongAnimal(fooBasic, fooCat);
+	/*
+	 * Free memory: class Animal
+	*/
+	delete _basic;
+	delete _Cat;
+	delete _Dog;
+	/*
+	 * Free memory: class WrongAnimal
+	*/
+	delete fooBasic;
+	delete fooCat;
 	become_aware(4);
 	return (EXIT_SUCCESS);
 }

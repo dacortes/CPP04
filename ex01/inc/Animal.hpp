@@ -6,7 +6,7 @@
 /*   By: dacortes <dacortes@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/17 08:47:31 by dacortes          #+#    #+#             */
-/*   Updated: 2024/02/21 17:09:23 by dacortes         ###   ########.fr       */
+/*   Updated: 2024/02/22 09:31:03 by dacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ class Animal
 		/*
 		 * Set idea
 		*/
-		virtual void setIdea(std::string _idea) = 0;
+		//virtual void setIdea(std::string _idea) = 0;
 		/*
 		 * Get Methods
 		*/
