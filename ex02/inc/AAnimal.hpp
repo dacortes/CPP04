@@ -6,7 +6,7 @@
 /*   By: dacortes <dacortes@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/17 08:47:31 by dacortes          #+#    #+#             */
-/*   Updated: 2024/02/22 09:50:45 by dacortes         ###   ########.fr       */
+/*   Updated: 2024/02/22 11:36:09 by dacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ class AAnimal
 		/*
 		 * Membert Funtions
 		*/
-		virtual void	makeSound(void) const;
+		virtual void	makeSound(void) const = 0;
 };
 
 std::ostream &operator<<(std::ostream &os, const AAnimal &obj);

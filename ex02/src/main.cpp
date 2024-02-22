@@ -6,7 +6,7 @@
 /*   By: dacortes <dacortes@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/17 08:45:38 by dacortes          #+#    #+#             */
-/*   Updated: 2024/02/22 09:50:40 by dacortes         ###   ########.fr       */
+/*   Updated: 2024/02/22 11:38:57 by dacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,10 @@
 #include "../inc/Dog.hpp"
 #include "../inc/WrongCat.hpp"
 
-void	test_init_Animal(AAnimal *_basic, AAnimal *_Cat, AAnimal *_Dog)
+void	test_init_Animal(AAnimal *_Cat, AAnimal *_Dog)
 {
 	std::cout << C << "----------------------------------\n" << E;
 	std::cout << C << "Test init: Animal" << E << std::endl; 
-	std::cout << _basic << std::endl;
 	std::cout << _Cat << std::endl;
 	std::cout << _Dog << std::endl;
 	std::cout << C << "Test idea: Animal" << E << std::endl; 
@@ -33,19 +32,17 @@ void	test_init_Animal(AAnimal *_basic, AAnimal *_Cat, AAnimal *_Dog)
 	std::cout << C << "----------------------------------\n" << E;
 }
 
-void	test_sound_animal(AAnimal *_basic, AAnimal *_Cat, AAnimal *_Dog)
+void	test_sound_animal(AAnimal *_Cat, AAnimal *_Dog)
 {
 	std::cout << C << "Test sound: Animal" << E << std::endl;
-	_basic->makeSound();
 	_Cat->makeSound();
 	_Dog->makeSound();
 	std::cout << C << "----------------------------------\n" << E;
 }
 
-void	test_getType_animal(AAnimal *_basic, AAnimal *_Cat, AAnimal *_Dog)
+void	test_getType_animal(AAnimal *_Cat, AAnimal *_Dog)
 {
 	std::cout << C << "Test getType: Animal" << E << std::endl;
-	std::cout << _basic->getType() << " " << std::endl;
 	std::cout << _Cat->getType() << " " << std::endl;
 	std::cout << _Dog->getType() << " " << std::endl;
 	std::cout << C << "----------------------------------\n" << E;
@@ -167,7 +164,6 @@ bool	become_aware(unsigned int num)
 
 int	main(void)
 {
-	AAnimal *_basic = new AAnimal();
 	AAnimal *_Cat = new Cat();
 	AAnimal *_Dog = new Dog();
 	WrongAnimal *fooBasic = new WrongAnimal();
@@ -176,9 +172,9 @@ int	main(void)
 	/*
 	 * Test Animal
 	*/
-	test_init_Animal(_basic, _Cat, _Dog);
-	test_sound_animal(_basic, _Cat, _Dog);
-	test_getType_animal(_basic, _Cat, _Dog);
+	test_init_Animal(_Cat, _Dog);
+	test_sound_animal(_Cat, _Dog);
+	test_getType_animal(_Cat, _Dog);
 	/*
 	 * Test WrongAnimal
 	*/
@@ -188,7 +184,6 @@ int	main(void)
 	/*
 	 * Free memory: class AAnimal
 	*/
-	delete _basic;
 	delete _Cat;
 	delete _Dog;
 	/*
