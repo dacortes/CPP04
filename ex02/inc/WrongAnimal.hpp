@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dacortes <dacortes@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/17 08:47:31 by dacortes          #+#    #+#             */
-/*   Updated: 2024/02/22 09:37:04 by dacortes         ###   ########.fr       */
+/*   Created: 2024/02/18 16:44:14 by dacortes          #+#    #+#             */
+/*   Updated: 2024/02/19 00:58:59 by dacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# ifndef ANIMAL_HPP
-# define ANIMAL_HPP
+# ifndef WRONGANIMAL_HPP
+# define WRONGANIMAL_HPP
 
 /******************************************************************************/
 /*                            INCLUDES                                        */
@@ -39,7 +39,7 @@
 /*                            CLASS                                           */
 /******************************************************************************/
 
-class Animal
+class WrongAnimal
 {
 	protected:
 		std::string	type;
@@ -47,15 +47,11 @@ class Animal
 		/*
 		 * Orthodox Canonical Form
 		*/
-		Animal(void);
-		Animal(std::string _type);
-		Animal(const Animal &obj);
-		Animal &operator=(const Animal &obj);
-		virtual ~Animal(void);
-		/*
-		 * Set idea
-		*/
-		//virtual void setIdea(std::string _idea) = 0;
+		WrongAnimal(void);
+		WrongAnimal(std::string _type);
+		WrongAnimal(const WrongAnimal &obj);
+		WrongAnimal &operator=(const WrongAnimal &obj);
+		virtual ~WrongAnimal(void);
 		/*
 		 * Get Methods
 		*/
@@ -63,9 +59,9 @@ class Animal
 		/*
 		 * Membert Funtions
 		*/
-		virtual void	makeSound(void) const;
+		void	makeSound(void) const;
 };
 
-std::ostream &operator<<(std::ostream &os, const Animal &obj);
-std::ostream &operator<<(std::ostream &os, const Animal *obj);
+std::ostream &operator<<(std::ostream &os, const WrongAnimal &obj);
+std::ostream &operator<<(std::ostream &os, const WrongAnimal *obj);
 #endif

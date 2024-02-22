@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   AAnimal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dacortes <dacortes@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/17 08:47:31 by dacortes          #+#    #+#             */
-/*   Updated: 2024/02/22 09:37:04 by dacortes         ###   ########.fr       */
+/*   Updated: 2024/02/22 09:50:45 by dacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# ifndef ANIMAL_HPP
-# define ANIMAL_HPP
+# ifndef AANIMAL_HPP
+# define AANIMAL_HPP
 
 /******************************************************************************/
 /*                            INCLUDES                                        */
@@ -39,7 +39,7 @@
 /*                            CLASS                                           */
 /******************************************************************************/
 
-class Animal
+class AAnimal
 {
 	protected:
 		std::string	type;
@@ -47,11 +47,11 @@ class Animal
 		/*
 		 * Orthodox Canonical Form
 		*/
-		Animal(void);
-		Animal(std::string _type);
-		Animal(const Animal &obj);
-		Animal &operator=(const Animal &obj);
-		virtual ~Animal(void);
+		AAnimal(void);
+		AAnimal(std::string _type);
+		AAnimal(const AAnimal &obj);
+		AAnimal &operator=(const AAnimal &obj);
+		virtual ~AAnimal(void);
 		/*
 		 * Set idea
 		*/
@@ -66,6 +66,6 @@ class Animal
 		virtual void	makeSound(void) const;
 };
 
-std::ostream &operator<<(std::ostream &os, const Animal &obj);
-std::ostream &operator<<(std::ostream &os, const Animal *obj);
+std::ostream &operator<<(std::ostream &os, const AAnimal &obj);
+std::ostream &operator<<(std::ostream &os, const AAnimal *obj);
 #endif
