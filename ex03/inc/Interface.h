@@ -1,18 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   AAnimal.hpp                                         :+:      :+:    :+:   */
+/*   Interface.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dacortes <dacortes@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/17 08:47:31 by dacortes          #+#    #+#             */
-/*   Updated: 2024/02/22 11:39:47 by dacortes         ###   ########.fr       */
+/*   Created: 2024/02/23 12:38:22 by dacortes          #+#    #+#             */
+/*   Updated: 2024/02/23 12:42:26 by dacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# ifndef AANIMAL_HPP
-# define AANIMAL_HPP
-
+#ifndef INTERFACE
+# define INTERFACE
 /******************************************************************************/
 /*                            INCLUDES                                        */
 /******************************************************************************/
@@ -35,37 +34,5 @@
 # define O "\033[1m\033[38;5;208m"  //orange
 # define F "\033[1m\033[38;5;128m"  //purple
 
-/******************************************************************************/
-/*                            CLASS                                           */
-/******************************************************************************/
-
-class AAnimal
-{
-	protected:
-		std::string	type;
-	public:
-		/*
-		 * Orthodox Canonical Form
-		*/
-		AAnimal(void);
-		AAnimal(std::string _type);
-		AAnimal(const AAnimal &obj);
-		AAnimal &operator=(const AAnimal &obj);
-		virtual ~AAnimal(void);
-		/*
-		 * Set idea
-		*/
-		//virtual void setIdea(std::string _idea) = 0;
-		/*
-		 * Get Methods
-		*/
-		std::string	getType(void) const; 
-		/*
-		 * Membert Funtions
-		*/
-		virtual void	makeSound(void) const = 0;
-};
-
-std::ostream &operator<<(std::ostream &os, const AAnimal &obj);
-std::ostream &operator<<(std::ostream &os, const AAnimal *obj);
+class AMateria;
 #endif
