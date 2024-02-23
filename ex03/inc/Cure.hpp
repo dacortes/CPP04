@@ -6,12 +6,14 @@
 /*   By: dacortes <dacortes@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 17:08:34 by dacortes          #+#    #+#             */
-/*   Updated: 2024/02/22 17:16:09 by dacortes         ###   ########.fr       */
+/*   Updated: 2024/02/23 13:15:58 by dacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CURE_HPP
 # define CURE_HPP
+
+# include "Interface.h" 
 
 class Cure
 {

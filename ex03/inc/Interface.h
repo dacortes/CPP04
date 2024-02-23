@@ -6,12 +6,12 @@
 /*   By: dacortes <dacortes@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 12:38:22 by dacortes          #+#    #+#             */
-/*   Updated: 2024/02/23 12:42:26 by dacortes         ###   ########.fr       */
+/*   Updated: 2024/02/23 18:17:29 by dacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef INTERFACE
-# define INTERFACE
+#ifndef INTERFACE_H
+# define INTERFACE_H
 /******************************************************************************/
 /*                            INCLUDES                                        */
 /******************************************************************************/
@@ -19,6 +19,10 @@
 # include <string>
 # include <cstdlib>
 # include <iostream>
+# include "AMateria.hpp"
+# include "ICharacter.hpp"
+# include "Cure.hpp"
+# include "Ice.hpp"
 
 /******************************************************************************/
 /*                            COLORS                                          */
@@ -34,5 +38,13 @@
 # define O "\033[1m\033[38;5;208m"  //orange
 # define F "\033[1m\033[38;5;128m"  //purple
 
+/******************************************************************************/
+/*                            CLASS                                           */
+/******************************************************************************/
+
 class AMateria;
+class ICharacter;
+class Ice;
+class Cure;
+class Character;
 #endif

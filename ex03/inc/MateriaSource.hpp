@@ -1,34 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Ice.hpp                                            :+:      :+:    :+:   */
+/*   MateriaSource.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dacortes <dacortes@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/22 17:16:29 by dacortes          #+#    #+#             */
-/*   Updated: 2024/02/23 13:15:57 by dacortes         ###   ########.fr       */
+/*   Created: 2024/02/23 16:29:59 by dacortes          #+#    #+#             */
+/*   Updated: 2024/02/23 16:33:51 by dacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ICE_HPP
-# define ICE_HPP
+#ifndef MATERIASOURCE_HPP
+# define MATERIASOURCE_HPP
 
-# include "Interface.h" 
-
-class Ice
+class MateriaSource
 {
 	public:
 		/*
 		 * Orthodox Canonical Form
 		*/
-		Ice(void);
-		Ice(const Ice &obj);
-		Ice &operator=(const Ice &obj);
-		~Ice(void);
-		/*
-		 * Membert Funtions
-		*/
-		AMateria	*clone(void)const;
-		void		use(ICharacter& target);
+		MateriaSource(void);
+		MateriaSource(const MateriaSource &obj);
+		MateriaSource &operator=(const MateriaSource &obj);
+		~MateriaSource(void);
 };
 #endif

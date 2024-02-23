@@ -6,12 +6,14 @@
 /*   By: dacortes <dacortes@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 17:00:57 by dacortes          #+#    #+#             */
-/*   Updated: 2024/02/23 09:41:08 by dacortes         ###   ########.fr       */
+/*   Updated: 2024/02/23 13:15:57 by dacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef	ICHACTER_HPP
 # define ICHACTER_HPP
+
+# include "Interface.h" 
 
 class ICharacter
 {

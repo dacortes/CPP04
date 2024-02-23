@@ -1,34 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Ice.hpp                                            :+:      :+:    :+:   */
+/*   Character.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dacortes <dacortes@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/22 17:16:29 by dacortes          #+#    #+#             */
-/*   Updated: 2024/02/23 13:15:57 by dacortes         ###   ########.fr       */
+/*   Created: 2024/02/23 16:42:40 by dacortes          #+#    #+#             */
+/*   Updated: 2024/02/23 18:17:29 by dacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ICE_HPP
-# define ICE_HPP
+#ifndef CHARACTER_HPP
+# define CHARACTER_HPP
 
-# include "Interface.h" 
+# include "Interface.h"
 
-class Ice
+class Character
 {
+	private:
+		std::string name;
 	public:
 		/*
 		 * Orthodox Canonical Form
 		*/
-		Ice(void);
-		Ice(const Ice &obj);
-		Ice &operator=(const Ice &obj);
-		~Ice(void);
+		Character(void);
+		Character(const Character &obj);
+		Character &operator=(const Character &Obj);
+		~Character(void);
+
+		Character(std::string name);
 		/*
-		 * Membert Funtions
+		 * Get Methods
 		*/
-		AMateria	*clone(void)const;
-		void		use(ICharacter& target);
+		std::string getName(void) const;
 };
 #endif

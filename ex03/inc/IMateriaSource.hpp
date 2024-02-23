@@ -1,34 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Ice.hpp                                            :+:      :+:    :+:   */
+/*   IMateriaSource.hpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dacortes <dacortes@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/22 17:16:29 by dacortes          #+#    #+#             */
-/*   Updated: 2024/02/23 13:15:57 by dacortes         ###   ########.fr       */
+/*   Created: 2024/02/23 16:02:14 by dacortes          #+#    #+#             */
+/*   Updated: 2024/02/23 16:31:18 by dacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ICE_HPP
-# define ICE_HPP
+#ifndef IMATERIASOURCE_HPP
+# define IMATERIASOURCE_HPP
 
-# include "Interface.h" 
-
-class Ice
+class IMateriaSource
 {
 	public:
 		/*
-		 * Orthodox Canonical Form
+		 * Destructor
 		*/
-		Ice(void);
-		Ice(const Ice &obj);
-		Ice &operator=(const Ice &obj);
-		~Ice(void);
+		virtual ~IMateriaSource() {}
 		/*
-		 * Membert Funtions
+		 * Member Funtions
 		*/
-		AMateria	*clone(void)const;
-		void		use(ICharacter& target);
+		virtual void learnMateria(AMateria*) = 0;
+		virtual AMateria* createMateria(std::string const & type) = 0;
 };
+
 #endif
