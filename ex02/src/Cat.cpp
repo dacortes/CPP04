@@ -35,18 +35,16 @@ Cat	&Cat::operator=(const Cat &obj)
 {
 	std::cout << O << "Cat: " << E << "Assignation operator called"
 		<< std::endl;
-	if (this  != &obj)
+	if ( this != &obj)
 	{
 		if (this->brain)
-		{
 			delete this->brain;
+		if (obj.brain)
 			this->brain = new Brain(*obj.brain);
-		}
 		else
 			this->brain = new Brain();
-		this->type = obj.type;
 	}
-	return (*this);	
+	return (*this);
 }
 
 Cat::~Cat(void)

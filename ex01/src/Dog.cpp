@@ -35,16 +35,14 @@ Dog	&Dog::operator=(const Dog &obj)
 {
 	std::cout << Y << "Dog: " << E << "Assignation operator called"
 		<< std::endl;
-	if (this  != &obj)
+	if ( this != &obj)
 	{
 		if (this->brain)
-		{
 			delete this->brain;
+		if (obj.brain)
 			this->brain = new Brain(*obj.brain);
-		}
 		else
 			this->brain = new Brain();
-		this->type = obj.type;
 	}
 	return (*this);
 }

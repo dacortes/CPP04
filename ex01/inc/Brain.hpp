@@ -40,7 +40,7 @@
 /*                            CLASS                                           */
 /******************************************************************************/
 
-#ifndef MAX_IDES
+#ifndef MAX_IDEAS
 # define MAX_IDEAS 100
 #endif
 

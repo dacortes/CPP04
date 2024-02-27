@@ -99,17 +99,9 @@ unsigned int animal_allocation(AAnimal **basic, unsigned int num)
 	for (_new = 0; _new < num; _new++)
 	{
 		if (!(_new % 2))
-		{
 			basic[_new] = new Cat();
-			if (basic[_new] == nullptr)
-				return (msg_error("memory allocation") + _new);
-		}
 		else
-		{
 			basic[_new] = new Dog();
-			if (basic[_new] == nullptr)
-				return (msg_error("memory allocation") + _new);
-		}
 	}
 	return (_new);
 }
@@ -154,8 +146,6 @@ bool	become_aware(unsigned int num)
 	AAnimal **basic = new AAnimal*[num];
 	unsigned int del = 0;
 
-	if (basic == nullptr)
-		return (msg_error("memory allocation"));
 	del = animal_allocation(basic, num);
 	set_ideas(basic, del);
 	delete_animals(basic, del);

@@ -17,7 +17,7 @@
 NAME = Abstract 
 CPP = c++
 FLAGS = -Wall -Werror -Wextra -g -pedantic -std=c++98 \
-	#-fsanitize=address
+	-fsanitize=address
 RM = rm -rf
 
 ################################################################################
